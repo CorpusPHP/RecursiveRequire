@@ -1,0 +1,20 @@
+{
+	"name": "corpus/recursive-require",
+	"type": "library",
+	"description": "Library to Recursively Require Every PHP File in a Directory",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Jesse Donat",
+			"email": "jdonat@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Corpus\\RecursiveRequire\\": "src/"
+		}
+	}
+}
