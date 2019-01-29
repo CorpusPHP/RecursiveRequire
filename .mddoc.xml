@@ -16,7 +16,8 @@
 			</section>
 
 			<section title="Example">
-				<text>WIP</text>
+				<text>Here is a simple usage example:</text>
+				<source name="example/example.php" lang="php" />
 			</section>
 
 			<section title="Documentation">

@@ -21,7 +21,19 @@ composer require 'corpus/recursive-require'
 
 ## Example
 
-WIP
+Here is a simple usage example:
+
+```php
+<?php
+
+use Corpus\RecursiveRequire\Loader;
+
+require __DIR__ . '../vendor/autoload.php';
+
+$loader = new Loader('path/to/directory');
+$loader();
+
+```
 
 ## Documentation
 
