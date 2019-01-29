@@ -2,6 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/corpus/recursive-require/version)](https://packagist.org/packages/corpus/recursive-require)
 [![License](https://poser.pugx.org/corpus/recursive-require/license)](https://packagist.org/packages/corpus/recursive-require)
+[![Build Status](https://travis-ci.org/CorpusPHP/RecursiveRequire.svg?branch=master)](https://travis-ci.org/CorpusPHP/RecursiveRequire)
 
 
 Library to Recursively Require Every PHP File in a Directory Tree

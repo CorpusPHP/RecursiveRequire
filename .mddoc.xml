@@ -3,6 +3,7 @@
 		<section title="Recursive Require">
 			<badge-poser type="version" />
 			<badge-poser type="license" />
+			<badge-travis name="CorpusPHP/RecursiveRequire" />
 
 			<text>Library to Recursively Require Every PHP File in a Directory Tree</text>
 
