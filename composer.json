@@ -1,7 +1,7 @@
 {
 	"name": "corpus/recursive-require",
 	"type": "library",
-	"description": "Library to Recursively Require Every PHP File in a Directory",
+	"description": "Library to Recursively Require Every PHP File in a Directory Tree",
 	"license": "MIT",
 	"authors": [
 		{

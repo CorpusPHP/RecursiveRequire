@@ -4,7 +4,7 @@
 [![License](https://poser.pugx.org/corpus/recursive-require/license)](https://packagist.org/packages/corpus/recursive-require)
 
 
-Library to Recursively Require Every PHP File in a Directory
+Library to Recursively Require Every PHP File in a Directory Tree
 
 ## Requirements
 
