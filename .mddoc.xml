@@ -1,0 +1,25 @@
+<mddoc>
+	<docpage target="README.md" autoloader="psr0" autoloader-root="src">
+		<section title="Recursive Require">
+			<badge-poser type="version" />
+			<badge-poser type="license" />
+
+			<text>Library to Recursively Require Every PHP File in a Directory</text>
+
+			<section title="Requirements">
+				<composer-requires/>
+			</section>
+
+			<section title="Installing">
+				<composer-install/>
+			</section>
+
+			<section title="Example">
+				<text>WIP</text>
+			</section>
+			<section title="Documentation">
+				<file name="src/Loader.php" />
+			</section>
+		</section>
+	</docpage>
+</mddoc>
