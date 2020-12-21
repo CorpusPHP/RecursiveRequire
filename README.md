@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/corpus/recursive-require/version)](https://packagist.org/packages/corpus/recursive-require)
 [![License](https://poser.pugx.org/corpus/recursive-require/license)](https://packagist.org/packages/corpus/recursive-require)
-[![Build Status](https://travis-ci.org/CorpusPHP/RecursiveRequire.svg?branch=master)](https://travis-ci.org/CorpusPHP/RecursiveRequire)
+[![Build Status](https://github.com/CorpusPHP/RecursiveRequire/workflows/CI/badge.svg?)](https://github.com/CorpusPHP/RecursiveRequire/actions?query=workflow%3ACI)
 
 
 Library to Recursively Require Every PHP File in a Directory Tree
@@ -19,7 +19,7 @@ Install the latest version with:
 composer require 'corpus/recursive-require'
 ```
 
-## Example
+## Usage
 
 Here is a simple usage example:
 
@@ -42,7 +42,7 @@ $loader();
 #### Method: Loader->__construct
 
 ```php
-function __construct($path)
+function __construct(string $path)
 ```
 
 ##### Parameters:
@@ -54,14 +54,10 @@ function __construct($path)
 #### Method: Loader->__invoke
 
 ```php
-function __invoke([ $regex = "/\\.php$/"])
+function __invoke([ string $regex = "/\\.php\$/"]) : array
 ```
 
 Trigger the require's
-
-##### Parameters:
-
-- ***string*** `$regex`
 
 ##### Returns:
 
