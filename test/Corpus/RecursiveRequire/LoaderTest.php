@@ -21,4 +21,5 @@ class LoaderTest extends TestCase {
 
 		$this->assertSame([], $loader());
 	}
+
 }

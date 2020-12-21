@@ -4,9 +4,7 @@ namespace Corpus\RecursiveRequire;
 
 class Loader {
 
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	protected $path;
 
 	/**
@@ -19,10 +17,9 @@ class Loader {
 	/**
 	 * Trigger the require's
 	 *
-	 * @param string $regex
 	 * @return array The result as a map of filename to return value.
 	 */
-	public function __invoke( string $regex = "/\\.php$/" ) {
+	public function __invoke( string $regex = "/\\.php$/" ) : array {
 		$output = [];
 
 		$dir   = new \RecursiveDirectoryIterator($this->path);
