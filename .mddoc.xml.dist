@@ -3,7 +3,7 @@
 		<section title="Recursive Require">
 			<badge-poser type="version"/>
 			<badge-poser type="license"/>
-			<badge-github-action name="CorpusPHP/RecursiveRequire" workflow="CI"/>
+			<badge-github-action name="CorpusPHP/RecursiveRequire" workflow-file="ci.yml"/>
 
 			<text>Library to Recursively Require Every PHP File in a Directory Tree</text>
 
