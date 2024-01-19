@@ -4,14 +4,16 @@ namespace Corpus\RecursiveRequire;
 
 class Loader {
 
-	/** @var string */
-	protected $path;
+	protected string $path;
+	protected bool $once;
 
 	/**
-	 * @param string $path Root path
+	 * @param string $path Root path to recursively require
+	 * @param bool   $once Whether to use `require_once` instead of `require`
 	 */
-	public function __construct( string $path ) {
+	public function __construct( string $path, bool $once = false ) {
 		$this->path = rtrim($path, DIRECTORY_SEPARATOR);
+		$this->once = $once;
 	}
 
 	/**
@@ -27,7 +29,7 @@ class Loader {
 		$files = new \RegexIterator($ite, $regex);
 
 		foreach( $files as $file ) {
-			$output[(string)$file] = require $file;
+			$output[(string)$file] = $this->once ? (require_once $file) : (require $file);
 		}
 
 		return $output;
