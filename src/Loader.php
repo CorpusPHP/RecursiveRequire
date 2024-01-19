@@ -2,6 +2,9 @@
 
 namespace Corpus\RecursiveRequire;
 
+/**
+ * Helper to recursively require all PHP files in a directory
+ */
 class Loader {
 
 	protected string $path;
@@ -17,8 +20,13 @@ class Loader {
 	}
 
 	/**
-	 * Trigger the require's
+	 * Trigger the `require`(s)
 	 *
+	 * Note: The order in which files are required is not guaranteed.
+	 * It will vary based on the Operating System and filesystem.
+	 * Do not rely on the order in which files are required.
+	 *
+	 * @param string $regex A regex to filter the files to require
 	 * @return array The result as a map of filename to return value.
 	 */
 	public function __invoke( string $regex = "/\\.php$/" ) : array {

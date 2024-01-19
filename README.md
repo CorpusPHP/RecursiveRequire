@@ -39,6 +39,8 @@ $loader();
 
 ### Class: \Corpus\RecursiveRequire\Loader
 
+Helper to recursively require all PHP files in a directory
+
 #### Method: Loader->__construct
 
 ```php
@@ -58,7 +60,15 @@ function __construct(string $path [, bool $once = false])
 function __invoke([ string $regex = "/\\.php\$/"]) : array
 ```
 
-Trigger the require's
+Trigger the `require`(s)  
+  
+Note: The order in which files are required is not guaranteed.  
+It will vary based on the Operating System and filesystem.  
+Do not rely on the order in which files are required.
+
+##### Parameters:
+
+- ***string*** `$regex` - A regex to filter the files to require
 
 ##### Returns:
 
