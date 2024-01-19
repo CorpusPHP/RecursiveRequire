@@ -8,7 +8,7 @@ $finder = PhpCsFixer\Finder::create()
 	->name('*.php');
 
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config)
 	->setUsingCache(true)
 	->setIndent("\t")
 	->setLineEnding("\n")
@@ -38,7 +38,10 @@ return PhpCsFixer\Config::create()
 			'no_leading_import_slash'         => true,
 			'no_leading_namespace_whitespace' => true,
 
+			'array_indentation' => true,
+
 			'no_whitespace_in_blank_line' => true,
+			'no_trailing_whitespace'      => true,
 
 			'phpdoc_add_missing_param_annotation' => [ 'only_untyped' => true, ],
 			'phpdoc_indent'                       => true,
@@ -86,6 +89,7 @@ return PhpCsFixer\Config::create()
 
 			'single_line_after_imports'          => true,
 			'single_blank_line_before_namespace' => true,
+			'single_line_comment_spacing'        => true,
 			'blank_line_after_namespace'         => true,
 			'single_blank_line_at_eof'           => true,
 			'ternary_to_null_coalescing'         => true,
@@ -104,7 +108,7 @@ return PhpCsFixer\Config::create()
 			],
 
 			'blank_line_before_statement' => [
-				'statements' => [ 'continue', 'try', 'switch', 'die', 'exit', 'throw', 'return', 'yield', 'do' ],
+				'statements' => [ 'continue', 'try', 'switch', 'exit', 'throw', 'return', 'do' ],
 			],
 
 			'no_superfluous_phpdoc_tags' => [
@@ -120,6 +124,7 @@ return PhpCsFixer\Config::create()
 			'escape_implicit_backslashes' => true,
 			'explicit_indirect_variable'  => true,
 			'heredoc_to_nowdoc'           => true,
+			'heredoc_indentation'         => true,
 
 
 			'no_singleline_whitespace_before_semicolons' => true,
@@ -157,8 +162,14 @@ return PhpCsFixer\Config::create()
 				'import_functions' => false,
 			],
 
-			'trailing_comma_in_multiline_array' => true,
+			'trailing_comma_in_multiline' => [
+				'elements'      => [ 'arrays', 'arguments' ],
+				'after_heredoc' => true,
+			],
 			'single_line_comment_style' => true,
+			'empty_loop_condition' => [
+				'style' => 'for',
+			],
 		]
 	)
 	->setFinder($finder);
