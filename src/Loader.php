@@ -27,7 +27,7 @@ class Loader {
 	 * Do not rely on the order in which files are required.
 	 *
 	 * @param string $regex A regex to filter the files to require
-	 * @return array The result as a map of filename to return value.
+	 * @return array<string,mixed> The result as a map of filename to return value.
 	 */
 	public function __invoke( string $regex = "/\\.php$/" ) : array {
 		$output = [];

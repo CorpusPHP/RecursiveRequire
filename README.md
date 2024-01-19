@@ -72,4 +72,4 @@ Do not rely on the order in which files are required.
 
 ##### Returns:
 
-- ***array*** - The result as a map of filename to return value.
+- ***array<string,mixed>*** - The result as a map of filename to return value.
