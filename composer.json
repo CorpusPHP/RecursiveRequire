@@ -18,7 +18,7 @@
 		}
 	},
 	"require-dev": {
-		"corpus/coding-standard": "^0.6.0",
+		"corpus/coding-standard": "^0.9.0",
 		"donatj/drop": "^1.1",
 		"friendsofphp/php-cs-fixer": "^3.48",
 		"phpunit/phpunit": "^9.6",
