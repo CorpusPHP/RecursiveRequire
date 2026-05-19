@@ -37,7 +37,7 @@ $loader();
 
 ## Documentation
 
-### Class: \Corpus\RecursiveRequire\Loader
+### Class: Corpus\RecursiveRequire\Loader
 
 Helper to recursively require all PHP files in a directory
 
