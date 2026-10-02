@@ -1,13 +1,14 @@
 language: php
 
 php:
-  - 7.1
-  - 7.2
-  - nightly
+  - '7.1'
+  - '7.2'
+  - '8.6'
+  - 'nightly'
 
 matrix:
   allow_failures:
-    - php: nightly
+    - php: 'nightly'
 
 install: composer install
 script: vendor/bin/phpunit
