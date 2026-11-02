@@ -10,4 +10,11 @@ $finder = Finder::create()
 	->in(__DIR__ . '/example')
 	->name('*.php');
 
-return Config::php7x4()->setFinder($finder);
+$config = Config::php7x4();
+
+return $config
+	->setRules(array_merge(
+		[ '@PHPUnit9x1Migration:risky' => true ],
+		$config->getRules()
+	))
+	->setFinder($finder);
