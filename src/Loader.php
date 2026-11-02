@@ -29,7 +29,7 @@ class Loader {
 	 * @param string $regex A regex to filter the files to require
 	 * @return array<string,mixed> The result as a map of filename to return value.
 	 */
-	public function __invoke( string $regex = "/\\.php$/" ) : array {
+	public function __invoke( string $regex = "/\\.php$/" ): array {
 		$output = [];
 
 		$dir   = new \RecursiveDirectoryIterator($this->path);
