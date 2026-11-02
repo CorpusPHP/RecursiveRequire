@@ -30,3 +30,9 @@ jobs:
 
       - name: Run tests
         run: make test
+
+      - name: Verify formatting
+        run: make test-fixer
+
+      - name: Verify documentation
+        run: make test-docs

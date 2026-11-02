@@ -12,7 +12,7 @@ class LoaderTest extends TestCase {
 	private const NO_RETURN = 1;
 	private const ALREADY_LOADED = true;
 
-	public function test__invoke() : void {
+	public function test__invoke(): void {
 		$loader = new Loader(__DIR__ . '/TestDir');
 
 		$result = $loader();
@@ -27,13 +27,13 @@ class LoaderTest extends TestCase {
 		$this->assertSame($data, $result);
 	}
 
-	public function test__invoke_empty() : void {
+	public function test__invoke_empty(): void {
 		$loader = new Loader(__DIR__ . '/EmptyTestDir');
 
 		$this->assertSame([], $loader());
 	}
 
-	public function testOnce() : void {
+	public function testOnce(): void {
 		$loader = new Loader(__DIR__ . '/TestDir', true);
 
 		require_once __DIR__ . '/TestDir/SubDir1/SubDir2/SubDir3/file4.php';
